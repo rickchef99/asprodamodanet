@@ -25,11 +25,11 @@
       s.parentNode.insertBefore(t, s)
     }(window, document, 'script',
       'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init', '901738235121844');
+    fbq('init', '2236885326669536');
     fbq('track', 'PageView');
   </script>
   <noscript><img height="1" width="1" style="display:none"
-      src="https://www.facebook.com/tr?id=901738235121844&ev=PageView&noscript=1" /></noscript>
+      src="https://www.facebook.com/tr?id=2236885326669536&ev=PageView&noscript=1" /></noscript>
   <!-- End Meta Pixel Code -->
   <script>
     window.onload = function () {
@@ -45,7 +45,7 @@
 
   <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" async defer></script>
   <!-- <script>
-    window.pixelId = "901738235121844";
+    window.pixelId = "2236885326669536";
     var a = document.createElement("script");
     a.setAttribute("async", "");
     a.setAttribute("defer", "");
@@ -1794,18 +1794,27 @@ Rio de Flor">
                     variantRadios.forEach(function (radio) {
                       radio.addEventListener('change', function () {
                         var selectedVariant = document.querySelector('.variant-swatch__radio:checked + label .variant-swatch__image');
+                        var form = document.getElementsByClassName('product-form-payment');
                         if (selectedVariant) {
-
                           var newThumbId;
                           switch (radio.value) {
                             case 'Revoada Tropical':
                               newThumbId = '37252725375296';
+                              if (form.length > 0) {
+                                form[0].action = 'https://pay.pagamentodigital.xyz/mwK436a4XlMgQ8b';
+                              }
                               break;
                             case 'Magia Tropical':
                               newThumbId = '37252725899584';
+                              if (form.length > 0) {
+                                form[0].action = 'https://pay.pagamentodigital.xyz/nOzxZoW1jwXZJ07';
+                              }
                               break;
                             case 'Rio de Flor':
                               newThumbId = '37252725637440';
+                              if (form.length > 0) {
+                                form[0].action = 'https://pay.pagamentodigital.xyz/ODAK3Lbn5xoGE6V';
+                              }
                               break;
                           }
                           var newThumb = document.querySelector(`.product__thumbnail-item[data-media-id="${newThumbId}"]`);
@@ -2178,11 +2187,11 @@ Rio de Flor">
 
                 <div class="items-count" id="progress_bar" style="font-size: var(--font-progress);"></div>
                 <div class="product-form__buy-buttons">
-                  <form method="get" action="https://pay.starlnk-ixp.site/lDW0Za2w85aGN7E"
+                  <form method="get" action="https://pay.pagamentodigital.xyz/mwK436a4XlMgQ8b"
                     id="product-form-template--22614969254208__main-9340410036544" accept-charset="UTF-8"
-                    class="shopify-product-form" enctype="multipart/form-data" is="product-form"><input type="hidden"
-                      name="form_type" value="product"><input type="hidden" name="utf8" value="âœ“"><input type="hidden"
-                      disabled="" name="id" value="48701954883904">
+                    class="shopify-product-form product-form-payment" enctype="multipart/form-data" is="product-form">
+                    <input type="hidden" name="form_type" value="product"><input type="hidden" name="utf8"
+                      value="âœ“"><input type="hidden" disabled="" name="id" value="48701954883904">
 
 
                     <product-payment-container form-id="product-form-template--22614969254208__main-9340410036544"
